@@ -3,21 +3,21 @@ import style from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <section className={style.buttonFeedback}>
+    <ul className={style.listFeedback}>
       {options.map(option => {
         return (
-          <li key={option}>
+          <li className={style.itemFeedback} key={option}>
             <button
               className={style.button}
               type="button"
-              onClick={onLeaveFeedback}
+              onClick={() => onLeaveFeedback(option)}
             >
               {option}
             </button>
           </li>
         );
       })}
-    </section>
+    </ul>
   );
 };
 

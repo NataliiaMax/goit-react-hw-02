@@ -4,7 +4,7 @@ import style from './SectionTitle.module.css';
 const SectionTitle = ({ title, children }) => {
   return (
     <section className={style.section}>
-      <h1 className={style.title}>{title}</h1>
+      <h2 className={style.title}>{title}</h2>
       {children}
     </section>
   );
