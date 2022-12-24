@@ -3,16 +3,16 @@ import style from './SectionTitle.module.css';
 
 const SectionTitle = ({ title, children }) => {
   return (
-    <>
-      {' '}
-      <p className={style.title}>{title}</p>
+    <section className={style.section}>
+      <h1 className={style.title}>{title}</h1>
       {children}
-    </>
+    </section>
   );
 };
 
 SectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default SectionTitle;

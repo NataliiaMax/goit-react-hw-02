@@ -1,0 +1,10 @@
+.buttonFeedback{
+    display: flex;
+}
+
+.button{
+    width: 56px;
+    height: 30px;
+    background-color: blue;
+    text-align: center;
+}

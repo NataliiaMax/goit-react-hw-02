@@ -5,21 +5,24 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <section className={style.buttonFeedback}>
       {options.map(option => {
-        <button
-          type="button"
-          key={options}
-          name={option}
-          onClick={onLeaveFeedback}
-        >
-          {option}
-        </button>;
+        return (
+          <li key={option}>
+            <button
+              className={style.button}
+              type="button"
+              onClick={onLeaveFeedback}
+            >
+              {option}
+            </button>
+          </li>
+        );
       })}
     </section>
   );
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(option.PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
